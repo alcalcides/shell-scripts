@@ -1,8 +1,10 @@
 #!/bin/bash
 
-xrandr --listmonitors --verbose > bkp-xrandx-setup.txt
+BKP_PATH="./xrandr-setup.txt.bkp"
 
-echo "Back up done. See ./xrandx-setup.txt.bkp to details."
+xrandr --listmonitors --verbose >> $BKP_PATH
+
+echo "Back up done in\n$BKP_PATH"
 
 xrandr --listmonitors
 
